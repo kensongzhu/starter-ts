@@ -2,7 +2,7 @@
   "typescript.experimental.useTsgo": false,
   "eslint.enable": false,
   "prettier.enable": false,
-  "oxc.enable": true,
+  "oxc.enable": false,
   "biome.enabled": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "biomejs.biome",

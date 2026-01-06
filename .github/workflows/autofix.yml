@@ -12,17 +12,26 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: pnpm/action-setup@v4
-      
-      - uses: actions/setup-node@v6
-        with:
-          node-version: ">=20.19.0"
-          cache: "pnpm"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
-      - name: Install dependencies
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "lts/*"
+          cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install Dependencies
         run: pnpm install
 
-      - name: Lint (code)
+      - name: Lint Code
         run: pnpm lint:fix
+
+      - name: Format Files (e.g. markdown, yaml, etc.)
+        run: pnpm fmt:fix
+
+      # - name: Remove unused
+      #   run: pnpm knip --fix
 
       - uses: autofix-ci/action@635ffb0c9798bd160680f18fd73371e355b85f27

@@ -1,6 +1,6 @@
-# tsdown-starter
+# starter-ts
 
-A starter for creating a TypeScript package.
+A starter for creating a TypeScript package using tsdown.
 
 ## Development
 
