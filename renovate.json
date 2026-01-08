@@ -4,13 +4,13 @@
   "dependencyDashboard": true,
   "semanticCommits": "enabled",
   "labels": ["dependencies"],
-  "schedule": ["after 1am and before 2am every weekend"],
+  "schedule": ["after 1am and before 3am every weekend"],
   "packageRules": [
     { "matchUpdateTypes": ["major"], "automerge": false },
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
-      "automergeSchedule": ["after 2am and before 5am every weekend"]
+      "automergeSchedule": ["after 3am and before 6am every weekend"]
     }
   ],
 
