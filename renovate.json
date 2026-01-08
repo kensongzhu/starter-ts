@@ -1,6 +1,26 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:recommended"],
+  "dependencyDashboard": true,
+  "semanticCommits": "enabled",
+  "labels": ["dependencies"],
+  "schedule": ["after 1am and before 2am on weekends"],
+  "packageRules": [
+    { "matchUpdateTypes": ["major"], "automerge": false },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "automergeSchedule": ["after 2am and before 5am on weekends"]
+    }
+  ],
+
+  "rangeStrategy": "bump",
+  "ignoreDeps": ["node"],
+  "ignorePaths": [
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/vendor/**",
+    "**/__fixtures__/**"
   ]
 }
