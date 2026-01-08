@@ -30,7 +30,7 @@ importers:
         specifier: ^0.3.16
         version: 0.3.16
       tsdown:
-        specifier: ^0.18.1
+        specifier: ^0.18.4
         version: 0.18.4(@arethetypeswrong/core@0.18.2)(oxc-resolver@11.16.2)(publint@0.3.16)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
