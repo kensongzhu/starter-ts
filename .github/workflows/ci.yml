@@ -3,7 +3,7 @@ name: "ci"
 on:
   push:
     branches:
-      - "**"
+      - main
     tags:
       - "!**"
   pull_request:
@@ -40,4 +40,5 @@ jobs:
         run: |
           pnpm dlx pkg-pr-new publish \
             --pnpm \
-            --packageManager=pnpm,npm,yarn
+            --packageManager=pnpm,npm,yarn \
+            --template './examples/*'
