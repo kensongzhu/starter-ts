@@ -40,5 +40,4 @@ jobs:
         run: |
           pnpm dlx pkg-pr-new publish \
             --pnpm \
-            --packageManager=pnpm,npm,yarn \
-            --template './examples/*'
+            --packageManager=pnpm,npm,yarn
