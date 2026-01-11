@@ -35,7 +35,8 @@
     "lint:fix": "biome check . --write",
     "fmt:fix": "dprint fmt",
     "knip": "knip",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "prepare": "simple-git-hooks"
   },
   "devDependencies": {
     "@arethetypeswrong/core": "^0.18.2",
@@ -44,9 +45,20 @@
     "bumpp": "^10.3.2",
     "dprint": "^0.51.1",
     "knip": "^5.80.0",
+    "lint-staged": "^16.2.7",
     "publint": "^0.3.16",
+    "simple-git-hooks": "^2.13.1",
     "tsdown": "^0.18.4",
     "typescript": "^5.9.3",
     "vitest": "^4.0.16"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged && pnpm typecheck"
+  },
+  "lint-staged": {
+    "*": [
+      "pnpm lint:fix",
+      "pnpm fmt:fix --allow-no-files"
+    ]
   }
 }
