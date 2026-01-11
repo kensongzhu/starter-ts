@@ -35,8 +35,7 @@
     "lint:fix": "biome check . --write",
     "fmt:fix": "dprint fmt",
     "knip": "knip",
-    "prepublishOnly": "pnpm run build",
-    "prepare": "simple-git-hooks"
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
     "@arethetypeswrong/core": "^0.18.2",
