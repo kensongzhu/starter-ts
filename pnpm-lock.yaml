@@ -30,14 +30,14 @@ importers:
         specifier: ^16.2.7
         version: 16.2.7
       publint:
-        specifier: ^0.3.16
-        version: 0.3.16
+        specifier: ^0.3.17
+        version: 0.3.17
       simple-git-hooks:
         specifier: ^2.13.1
         version: 2.13.1
       tsdown:
         specifier: ^0.19.0
-        version: 0.19.0(@arethetypeswrong/core@0.18.2)(oxc-resolver@11.16.2)(publint@0.3.16)(typescript@5.9.3)
+        version: 0.19.0(@arethetypeswrong/core@0.18.2)(oxc-resolver@11.16.2)(publint@0.3.17)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -520,8 +520,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@publint/pack@0.1.2':
-    resolution: {integrity: sha512-S+9ANAvUmjutrshV4jZjaiG8XQyuJIZ8a4utWmN/vW1sgQ9IfBnPndwkmQYw53QmouOIytT874u65HEmu6H5jw==}
+  '@publint/pack@0.1.4':
+    resolution: {integrity: sha512-HDVTWq3H0uTXiU0eeSQntcVUTPP3GamzeXI41+x7uU9J65JgWQh3qWZHblR1i0npXfFtF+mxBiU2nJH8znxWnQ==}
     engines: {node: '>=18'}
 
   '@quansync/fs@1.0.0':
@@ -1127,8 +1127,8 @@ packages:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  publint@0.3.16:
-    resolution: {integrity: sha512-MFqyfRLAExPVZdTQFwkAQELzA8idyXzROVOytg6nEJ/GEypXBUmMGrVaID8cTuzRS1U5L8yTOdOJtMXgFUJAeA==}
+  publint@0.3.17:
+    resolution: {integrity: sha512-Q3NLegA9XM6usW+dYQRG1g9uEHiYUzcCVBJDJ7yMcWRqVU9LYZUWdqbwMZfmTCFC5PZLQpLAmhvRcQRl3exqkw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1731,7 +1731,7 @@ snapshots:
   '@oxc-resolver/binding-win32-x64-msvc@11.16.2':
     optional: true
 
-  '@publint/pack@0.1.2': {}
+  '@publint/pack@0.1.4': {}
 
   '@quansync/fs@1.0.0':
     dependencies:
@@ -2279,9 +2279,9 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  publint@0.3.16:
+  publint@0.3.17:
     dependencies:
-      '@publint/pack': 0.1.2
+      '@publint/pack': 0.1.4
       package-manager-detector: 1.6.0
       picocolors: 1.1.1
       sade: 1.8.1
@@ -2436,7 +2436,7 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  tsdown@0.19.0(@arethetypeswrong/core@0.18.2)(oxc-resolver@11.16.2)(publint@0.3.16)(typescript@5.9.3):
+  tsdown@0.19.0(@arethetypeswrong/core@0.18.2)(oxc-resolver@11.16.2)(publint@0.3.17)(typescript@5.9.3):
     dependencies:
       ansis: 4.2.0
       cac: 6.7.14
@@ -2456,7 +2456,7 @@ snapshots:
       unrun: 0.2.24
     optionalDependencies:
       '@arethetypeswrong/core': 0.18.2
-      publint: 0.3.16
+      publint: 0.3.17
       typescript: 5.9.3
     transitivePeerDependencies:
       - '@ts-macro/tsc'
