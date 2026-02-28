@@ -43,7 +43,7 @@
     "@types/node": "^25.3.2",
     "bumpp": "^10.3.2",
     "dprint": "^0.51.1",
-    "knip": "^5.81.0",
+    "knip": "^5.85.0",
     "lint-staged": "^16.2.7",
     "publint": "^0.3.17",
     "simple-git-hooks": "^2.13.1",
