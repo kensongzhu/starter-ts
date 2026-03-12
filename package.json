@@ -45,7 +45,7 @@
     "dprint": "^0.52.0",
     "knip": "^5.86.0",
     "lint-staged": "^16.3.3",
-    "publint": "^0.3.17",
+    "publint": "^0.3.18",
     "simple-git-hooks": "^2.13.1",
     "tsdown": "^0.21.2",
     "typescript": "^5.9.3",
