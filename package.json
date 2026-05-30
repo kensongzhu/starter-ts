@@ -41,7 +41,7 @@
     "@arethetypeswrong/core": "^0.18.3",
     "@biomejs/biome": "^2.4.16",
     "@types/node": "^25.9.1",
-    "bumpp": "^10.4.1",
+    "bumpp": "^11.1.0",
     "dprint": "^0.54.0",
     "knip": "^5.88.1",
     "lint-staged": "^16.4.0",
