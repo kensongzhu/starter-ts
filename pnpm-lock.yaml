@@ -25,7 +25,7 @@ importers:
         version: 0.54.0
       knip:
         specifier: ^5.88.1
-        version: 5.88.1(@types/node@25.9.1)(typescript@5.9.3)
+        version: 5.88.1(@types/node@25.9.1)(typescript@6.0.3)
       lint-staged:
         specifier: ^16.4.0
         version: 16.4.0
@@ -37,10 +37,10 @@ importers:
         version: 2.13.1
       tsdown:
         specifier: ^0.22.1
-        version: 0.22.1(@arethetypeswrong/core@0.18.3)(oxc-resolver@11.19.1)(publint@0.3.21)(tsx@4.21.0)(typescript@5.9.3)(unrun@0.2.34)
+        version: 0.22.1(@arethetypeswrong/core@0.18.3)(oxc-resolver@11.19.1)(publint@0.3.21)(tsx@4.21.0)(typescript@6.0.3)(unrun@0.2.34(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0))
       typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
+        specifier: ^6.0.3
+        version: 6.0.3
       vitest:
         specifier: ^4.1.7
         version: 4.1.7(@types/node@25.9.1)(vite@7.3.0(@types/node@25.9.1)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.8.2))
@@ -1493,6 +1493,11 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   unbash@2.2.0:
     resolution: {integrity: sha512-X2wH19RAPZE3+ldGicOkoj/SIA83OIxcJ6Cuaw23hf8Xc6fQpvZXY0SftE2JgS0QhYLUG4uwodSI3R53keyh7w==}
     engines: {node: '>=14'}
@@ -2028,9 +2033,12 @@ snapshots:
   '@rolldown/binding-openharmony-arm64@1.0.3':
     optional: true
 
-  '@rolldown/binding-wasm32-wasi@1.0.0-rc.12':
+  '@rolldown/binding-wasm32-wasi@1.0.0-rc.12(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
-      '@napi-rs/wasm-runtime': 1.1.1
+      '@napi-rs/wasm-runtime': 1.1.4(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
     optional: true
 
   '@rolldown/binding-wasm32-wasi@1.0.3':
@@ -2437,7 +2445,7 @@ snapshots:
 
   jsonc-parser@3.3.1: {}
 
-  knip@5.88.1(@types/node@25.9.1)(typescript@5.9.3):
+  knip@5.88.1(@types/node@25.9.1)(typescript@6.0.3):
     dependencies:
       '@nodelib/fs.walk': 1.2.8
       '@types/node': 25.9.1
@@ -2450,7 +2458,7 @@ snapshots:
       picomatch: 4.0.3
       smol-toml: 1.6.0
       strip-json-comments: 5.0.3
-      typescript: 5.9.3
+      typescript: 6.0.3
       unbash: 2.2.0
       yaml: 2.8.2
       zod: 4.3.5
@@ -2598,7 +2606,7 @@ snapshots:
 
   rfdc@1.4.1: {}
 
-  rolldown-plugin-dts@0.25.2(oxc-resolver@11.19.1)(rolldown@1.0.3)(typescript@5.9.3):
+  rolldown-plugin-dts@0.25.2(oxc-resolver@11.19.1)(rolldown@1.0.3)(typescript@6.0.3):
     dependencies:
       '@babel/generator': 8.0.0-rc.6
       '@babel/helper-validator-identifier': 8.0.0-rc.6
@@ -2610,11 +2618,11 @@ snapshots:
       obug: 2.1.1
       rolldown: 1.0.3
     optionalDependencies:
-      typescript: 5.9.3
+      typescript: 6.0.3
     transitivePeerDependencies:
       - oxc-resolver
 
-  rolldown@1.0.0-rc.12:
+  rolldown@1.0.0-rc.12(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0):
     dependencies:
       '@oxc-project/types': 0.122.0
       '@rolldown/pluginutils': 1.0.0-rc.12
@@ -2631,9 +2639,12 @@ snapshots:
       '@rolldown/binding-linux-x64-gnu': 1.0.0-rc.12
       '@rolldown/binding-linux-x64-musl': 1.0.0-rc.12
       '@rolldown/binding-openharmony-arm64': 1.0.0-rc.12
-      '@rolldown/binding-wasm32-wasi': 1.0.0-rc.12
+      '@rolldown/binding-wasm32-wasi': 1.0.0-rc.12(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
       '@rolldown/binding-win32-arm64-msvc': 1.0.0-rc.12
       '@rolldown/binding-win32-x64-msvc': 1.0.0-rc.12
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
     optional: true
 
   rolldown@1.0.3:
@@ -2763,7 +2774,7 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  tsdown@0.22.1(@arethetypeswrong/core@0.18.3)(oxc-resolver@11.19.1)(publint@0.3.21)(tsx@4.21.0)(typescript@5.9.3)(unrun@0.2.34):
+  tsdown@0.22.1(@arethetypeswrong/core@0.18.3)(oxc-resolver@11.19.1)(publint@0.3.21)(tsx@4.21.0)(typescript@6.0.3)(unrun@0.2.34(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)):
     dependencies:
       ansis: 4.3.0
       cac: 7.0.0
@@ -2774,7 +2785,7 @@ snapshots:
       obug: 2.1.1
       picomatch: 4.0.4
       rolldown: 1.0.3
-      rolldown-plugin-dts: 0.25.2(oxc-resolver@11.19.1)(rolldown@1.0.3)(typescript@5.9.3)
+      rolldown-plugin-dts: 0.25.2(oxc-resolver@11.19.1)(rolldown@1.0.3)(typescript@6.0.3)
       semver: 7.8.1
       tinyexec: 1.2.3
       tinyglobby: 0.2.16
@@ -2784,8 +2795,8 @@ snapshots:
       '@arethetypeswrong/core': 0.18.3
       publint: 0.3.21
       tsx: 4.21.0
-      typescript: 5.9.3
-      unrun: 0.2.34
+      typescript: 6.0.3
+      unrun: 0.2.34(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
     transitivePeerDependencies:
       - '@ts-macro/tsc'
       - '@typescript/native-preview'
@@ -2806,6 +2817,8 @@ snapshots:
 
   typescript@5.9.3: {}
 
+  typescript@6.0.3: {}
+
   unbash@2.2.0: {}
 
   unconfig-core@7.5.0:
@@ -2817,9 +2830,12 @@ snapshots:
 
   undici-types@7.24.6: {}
 
-  unrun@0.2.34:
+  unrun@0.2.34(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0):
     dependencies:
-      rolldown: 1.0.0-rc.12
+      rolldown: 1.0.0-rc.12(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
     optional: true
 
   validate-npm-package-name@5.0.1: {}
@@ -2831,7 +2847,7 @@ snapshots:
       picomatch: 4.0.4
       postcss: 8.5.6
       rollup: 4.54.0
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
     optionalDependencies:
       '@types/node': 25.9.1
       fsevents: 2.3.3
